@@ -2,28 +2,34 @@
   "kind": "collectionType",
   "collectionName": "coupon_coffees",
   "info": {
-    "name": "Coupon_coffee"
+    "name": "Coupon_coffee",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "name": {
       "type": "string",
+      "required": true,
       "unique": true,
-      "required": true
+      "default": "COUPON"
     },
-    "code": {
-      "type": "string",
-      "unique": true,
-      "required": true
-    },
-    "description": {
+    "descripton": {
       "type": "text",
       "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
     },
     "expiration_date": {
       "type": "datetime",
@@ -32,30 +38,29 @@
     "applicable_type": {
       "type": "enumeration",
       "enum": [
-        "A_new_customer",
-        "Shop_birthday",
         "Minimum_order_value",
         "Minimum_number_of_drinks"
-      ],
-      "required": true
+      ]
+    },
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "discount_rate": {
       "type": "string",
       "required": true
     },
-    "promotional_images": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
     "minimum_condition": {
       "type": "string",
       "required": true
+    },
+    "applicabletype": {
+      "type": "enumeration",
+      "enum": [
+        "money_reduction",
+        "percentage_reduction"
+      ]
     }
   }
 }

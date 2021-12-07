@@ -9,12 +9,9 @@
     "timestamps": true,
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string",
-      "unique": true,
-      "required": true
+      "type": "string"
     },
     "products": {
       "via": "category_id",

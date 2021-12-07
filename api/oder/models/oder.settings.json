@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "oders",
+  "info": {
+    "name": "Order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "timeorder": {
+      "type": "date",
+      "required": false
+    },
+    "orderstatus": {
+      "type": "boolean",
+      "required": false
+    },
+    "methodofpayments": {
+      "type": "string",
+      "required": false
+    },
+    "totalmoney": {
+      "type": "biginteger",
+      "required": false
+    },
+    "items": {
+      "type": "json"
+    }
+  }
+}

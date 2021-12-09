@@ -29,6 +29,11 @@
     },
     "items": {
       "type": "json"
+    },
+    "users_permissions_user": {
+      "columnName": "user",
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

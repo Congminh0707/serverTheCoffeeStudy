@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "oders",
+  "collectionName": "oder",
   "info": {
     "name": "Order",
     "description": ""
@@ -11,10 +11,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "timeorder": {
-      "type": "date",
-      "required": false
-    },
     "orderstatus": {
       "type": "boolean",
       "required": false
@@ -31,9 +27,27 @@
       "type": "json"
     },
     "users_permissions_user": {
-      "columnName": "user",
+      "columnName": "userid",
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "address": {
+      "type": "text",
+      "required": true
+    },
+    "note": {
+      "type": "text"
+    },
+    "fullname": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "discountpromotion": {
+      "type": "string"
     }
   }
 }

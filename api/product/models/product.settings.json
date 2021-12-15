@@ -34,8 +34,8 @@
       "type": "text"
     },
     "category_id": {
-      "model": "category",
-      "via": "products"
+      "via": "products",
+      "model": "category"
     }
   }
 }

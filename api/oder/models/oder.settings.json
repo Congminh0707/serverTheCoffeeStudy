@@ -26,11 +26,6 @@
     "items": {
       "type": "json"
     },
-    "users_permissions_user": {
-      "columnName": "userid",
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "address": {
       "type": "text",
       "required": true

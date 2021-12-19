@@ -17,7 +17,7 @@
       "unique": true,
       "default": "COUPON"
     },
-    "descripton": {
+    "description": {
       "type": "text",
       "required": true
     },
@@ -61,6 +61,11 @@
         "money_reduction",
         "percentage_reduction"
       ]
+    },
+    "show": {
+      "type": "boolean",
+      "default": true,
+      "required": true
     }
   }
 }
